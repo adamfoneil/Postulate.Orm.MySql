@@ -55,5 +55,24 @@ namespace MySqlTest
                 }));
             }
         }
+
+        [TestMethod]        
+        public void TestDelete()
+        {
+            var tdg = new TestDataGenerator();
+            tdg.Generate<Customer>(5, (c) =>
+            {
+                c.FirstName = tdg.Random(Source.FirstName);
+                c.LastName = tdg.Random(Source.LastName);
+                c.Email = $"{c.FirstName}.{c.LastName}@nowhere.org";
+                c.DiscountRate = tdg.RandomInRange(0, 100, (v) => { return Convert.ToDecimal(v) * 0.01m; });
+                c.EffectiveDate = tdg.RandomInRange(0, 1000, (v) => { return DateTime.Today.AddDays(v * -1); });
+                c.Phone = tdg.Random(Source.USPhoneNumber);
+            }, (records) =>
+            {
+                _db.SaveMultiple(records, batchSize: 1);
+                foreach (var row in records) _db.DeleteOne<Customer>(row.Id);
+            });
+        }
     }
 }

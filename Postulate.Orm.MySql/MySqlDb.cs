@@ -87,5 +87,10 @@ namespace Postulate.Orm.MySql
                     {string.Join(", ", columns.Select(s => $"@{s}"))}
                 ); SELECT LAST_INSERT_ID()";
         }
+
+        protected override string GetDeleteStatement<TRecord>()
+        {
+            return $"DELETE FROM {GetTableName<TRecord>()} WHERE {ApplyDelimiter(typeof(TRecord).IdentityColumnName())}=@id";
+        }
     }
 }
