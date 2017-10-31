@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postulate.Orm.MySql", "Postulate.Orm.MySql\Postulate.Orm.MySql.csproj", "{1C1BF1D7-52A5-4980-9262-250EB196FE1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlTest", "MySqlTest\MySqlTest.csproj", "{81476C4D-EF4C-474A-AFE8-6FAD27AEB23A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1C1BF1D7-52A5-4980-9262-250EB196FE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C1BF1D7-52A5-4980-9262-250EB196FE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C1BF1D7-52A5-4980-9262-250EB196FE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81476C4D-EF4C-474A-AFE8-6FAD27AEB23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81476C4D-EF4C-474A-AFE8-6FAD27AEB23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81476C4D-EF4C-474A-AFE8-6FAD27AEB23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81476C4D-EF4C-474A-AFE8-6FAD27AEB23A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
